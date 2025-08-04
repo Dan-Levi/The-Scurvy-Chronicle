@@ -1,4 +1,4 @@
-import { Compass, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Article } from "../../types/article";
 import { ArticleCard } from "./ArticleCard";
 
@@ -10,7 +10,13 @@ interface ArticleFeedProps {
   goToNext: () => void;
 }
 
-export const ArticleFeed = ({ articles, currentPage, lastPage, goToPrevious, goToNext }: ArticleFeedProps) => (
+export const ArticleFeed = ({
+  articles,
+  currentPage,
+  lastPage,
+  goToPrevious,
+  goToNext,
+}: ArticleFeedProps) => (
   <section className="relative overflow-hidden border-b-4 border-[#0D0D0D] bg-[#FFF8E7] px-4 py-12 sm:border-b-[8px] sm:px-6 sm:py-20">
     <div
       className="absolute inset-0 opacity-20"
@@ -53,9 +59,6 @@ export const ArticleFeed = ({ articles, currentPage, lastPage, goToPrevious, goT
           >
             Page {currentPage} of {lastPage}
           </span>
-          <div className="border-3 border-[#0D0D0D] bg-[#734319] p-1 shadow-[4px_4px_0_0_#0D0D0D] sm:border-[6px] sm:p-2 sm:shadow-[8px_8px_0_0_#0D0D0D]">
-            <Compass className="h-4 w-4 text-white sm:h-6 sm:w-6" />
-          </div>
         </div>
       </div>
 

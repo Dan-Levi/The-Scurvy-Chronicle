@@ -1,4 +1,5 @@
 import { Anchor, Skull, Swords } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Header = () => (
   <header className="relative overflow-hidden border-b-4 border-[#0D0D0D] bg-[#F2C12E] sm:border-b-[8px]">
@@ -32,27 +33,29 @@ export const Header = () => (
         </div>
       </div>
 
-      <h1
-        className="flex items-center gap-2 text-center text-xl font-black tracking-widest uppercase sm:gap-4 sm:text-left sm:text-2xl md:text-3xl"
-        style={{
-          transform: "skewX(-3deg)",
-          imageRendering: "pixelated",
-        }}
-      >
-        <span className="border-2 border-[#F23054] bg-[#0D0D0D] px-2 py-1 text-[#F2C12E] shadow-[3px_3px_0_0_#F23054] sm:border-[4px] sm:shadow-[6px_6px_0_0_#F23054]">
-          The Scurvy
-        </span>
-        <span className="border-2 border-[#0D0D0D] bg-[#F23054] px-2 py-1 text-white shadow-[3px_3px_0_0_#0D0D0D] sm:border-[4px] sm:shadow-[6px_6px_0_0_#0D0D0D]">
-          Chronicle
-        </span>
-        <Skull
-          className="h-8 w-8 sm:h-12 sm:w-12"
+      <Link to="/" className="group">
+        <h1
+          className="flex items-center gap-2 text-center text-xl font-black tracking-widest uppercase sm:gap-4 sm:text-left sm:text-2xl md:text-3xl"
           style={{
-            transform: "rotate(12deg)",
+            transform: "skewX(-3deg)",
             imageRendering: "pixelated",
           }}
-        />
-      </h1>
+        >
+          <span className="border-2 border-[#F23054] bg-[#0D0D0D] px-2 py-1 text-[#F2C12E] shadow-[3px_3px_0_0_#F23054] sm:border-[4px] sm:shadow-[6px_6px_0_0_#F23054]">
+            The Scurvy
+          </span>
+          <span className="border-2 border-[#0D0D0D] bg-[#F23054] px-2 py-1 text-white shadow-[3px_3px_0_0_#0D0D0D] sm:border-[4px] sm:shadow-[6px_6px_0_0_#0D0D0D]">
+            Chronicle
+          </span>
+          <Skull
+            className="skull-icon h-8 w-8 sm:h-12 sm:w-12"
+            style={{
+              transform: "rotate(12deg)",
+              imageRendering: "pixelated",
+            }}
+          />
+        </h1>
+      </Link>
     </div>
   </header>
 );

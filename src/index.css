@@ -1,3 +1,17 @@
 @import "tailwindcss";
 
+@keyframes rattle-skull {
+  from, to { transform: rotate(12deg); }
+  25% { transform: rotate(7deg) translateX(-2px); }
+  50% { transform: rotate(17deg) translateX(2px); }
+  75% { transform: rotate(10deg); }
+}
 
+.group:hover .skull-icon {
+  animation: rattle-skull 0.4s ease-in-out;
+}
+
+.skull-base {
+  transform: rotate(12deg);
+  image-rendering: pixelated;
+}
