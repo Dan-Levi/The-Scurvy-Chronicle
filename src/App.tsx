@@ -1,11 +1,9 @@
-import { useArticles } from "./hooks/useArticles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
-import { Hero } from "./components/home/Hero";
-import { ArticleFeed } from "./components/home/ArticleFeed";
-import { Callout } from "./components/home/Callout";
 import { TopStrap } from "./components/layout/TopStrap";
-import { SectionDivider } from "./components/layout/SectionDivider";
+import { HomePage } from "./pages/HomePage";
+import { ArticlePage } from "./pages/ArticlePage";
 
 /**
  * Color Palette:
@@ -18,23 +16,17 @@ import { SectionDivider } from "./components/layout/SectionDivider";
  */
 
 export default function App() {
-  const { articles, currentPage, lastPage, goToPrevious, goToNext } = useArticles();
-
   return (
-    <div className="min-h-screen bg-[#FFF8E7] font-serif text-[#0D0D0D] antialiased">
-      <TopStrap />
-      <Header />
-      <Hero />
-      <SectionDivider />
-      <ArticleFeed
-        articles={articles}
-        currentPage={currentPage}
-        lastPage={lastPage}
-        goToPrevious={goToPrevious}
-        goToNext={goToNext}
-      />
-      <Callout />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-[#FFF8E7] font-serif text-[#0D0D0D] antialiased">
+        <TopStrap />
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/article/:id" element={<ArticlePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }

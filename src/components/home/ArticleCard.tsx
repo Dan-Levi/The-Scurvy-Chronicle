@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Article } from "../../types/article";
 
 interface ArticleCardProps {
@@ -67,9 +68,9 @@ export const ArticleCard = ({ article, index }: ArticleCardProps) => (
         <div className="text-xs font-black uppercase opacity-60">
           By Capt. Drunkbeard
         </div>
-        <button className="border-3 border-[#0D0D0D] bg-[#F2C12E] px-3 py-1 text-xs font-black uppercase shadow-[5px_5px_0_0_#0D0D0D] transition-all hover:translate-x-[-1px] hover:translate-y-[-1px] hover:transform hover:shadow-[6px_6px_0_0_#0D0D0D] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0_0_#0D0D0D] sm:border-[6px] sm:px-4 sm:py-2 sm:text-sm sm:shadow-[10px_10px_0_0_#0D0D0D] sm:hover:translate-x-[-2px] sm:hover:translate-y-[-2px] sm:hover:shadow-[12px_12px_0_0_#0D0D0D] sm:active:translate-x-[2px] sm:active:translate-y-[2px] sm:active:shadow-[6px_6px_0_0_#0D0D0D]">
+        <Link to={`/article/${article.id}`} className="border-3 border-[#0D0D0D] bg-[#F2C12E] px-3 py-1 text-xs font-black uppercase shadow-[5px_5px_0_0_#0D0D0D] transition-all hover:translate-x-[-1px] hover:translate-y-[-1px] hover:transform hover:shadow-[6px_6px_0_0_#0D0D0D] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0_0_#0D0D0D] sm:border-[6px] sm:px-4 sm:py-2 sm:text-sm sm:shadow-[10px_10px_0_0_#0D0D0D] sm:hover:translate-x-[-2px] sm:hover:translate-y-[-2px] sm:hover:shadow-[12px_12px_0_0_#0D0D0D] sm:active:translate-x-[2px] sm:active:translate-y-[2px] sm:active:shadow-[6px_6px_0_0_#0D0D0D]">
           Read Rant
-        </button>
+        </Link>
       </div>
     </div>
   </article>
