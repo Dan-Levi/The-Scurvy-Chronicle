@@ -18,14 +18,14 @@ export const ArticlePage = () => {
 
   if (!article) {
     return (
-      <div className="flex h-screen items-center justify-center bg-[#FFF8E7]">
+      <div className="flex h-screen items-center justify-center bg-[#F2E2CE]">
         <div className="animate-ping text-4xl">☠️</div>
       </div>
     );
   }
 
   return (
-    <div className="relative overflow-hidden border-b-4 border-[#0D0D0D] bg-[#FFF8E7] px-4 py-12 sm:border-b-[8px] sm:px-6 sm:py-20">
+    <div className="relative overflow-hidden border-b-4 border-[#0D0D0D] bg-[#F2E2CE] px-4 py-12 sm:border-b-[8px] sm:px-6 sm:py-20">
       <div className="relative z-10 mx-auto max-w-4xl">
         <h1
           className="mb-8 text-3xl font-black tracking-widest uppercase sm:mb-12 sm:text-4xl md:text-5xl"
@@ -34,7 +34,7 @@ export const ArticlePage = () => {
             imageRendering: "pixelated",
           }}
         >
-          <span className="mb-2 inline-block border-3 border-[#0D0D0D] bg-[#F23054] px-2 py-1 text-white shadow-[5px_5px_0_0_#0D0D0D] sm:border-[6px] sm:px-3 sm:py-2 sm:shadow-[10px_10px_0_0_#0D0D0D]">
+          <span className="mb-2 inline-block border-3 border-[#0D0D0D] bg-[#D97B59] px-2 py-1 text-[#0D0D0D] shadow-[5px_5px_0_0_#401801] sm:border-[6px] sm:px-3 sm:py-2 sm:shadow-[10px_10px_0_0_#401801]">
             {article.gen_title}
           </span>
         </h1>
@@ -48,10 +48,10 @@ export const ArticlePage = () => {
           <img
             src={`https://api.danlevi.no/uploads/${article.gen_image_name}`}
             alt={article.gen_title}
-            className="w-full border-4 border-[#0D0D0D] object-cover shadow-[10px_10px_0_0_#0D0D0D] sm:border-[8px] sm:shadow-[20px_20px_0_0_#0D0D0D]"
+            className="w-full border-4 border-[#0D0D0D] object-cover shadow-[10px_10px_0_0_#401801] sm:border-[8px] sm:shadow-[20px_20px_0_0_#401801]"
           />
-          <div className="absolute -top-2 -right-2 h-6 w-6 border-2 border-[#0D0D0D] bg-[#F2C12E] shadow-[3px_3px_0_0_#0D0D0D] sm:-top-3 sm:-right-3 sm:h-8 sm:w-8 sm:border-[4px] sm:shadow-[6px_6px_0_0_#0D0D0D]" />
-          <div className="absolute -bottom-2 -left-2 h-6 w-6 border-2 border-[#0D0D0D] bg-[#F27F1B] shadow-[3px_3px_0_0_#0D0D0D] sm:-bottom-3 sm:-left-3 sm:h-8 sm:w-8 sm:border-[4px] sm:shadow-[6px_6px_0_0_#0D0D0D]" />
+          <div className="absolute -top-2 -right-2 h-6 w-6 border-2 border-[#0D0D0D] bg-[#D97B59] shadow-[3px_3px_0_0_#401801] sm:-top-3 sm:-right-3 sm:h-8 sm:w-8 sm:border-[4px] sm:shadow-[6px_6px_0_0_#401801]" />
+          <div className="absolute -bottom-2 -left-2 h-6 w-6 border-2 border-[#0D0D0D] bg-[#D97B59] shadow-[3px_3px_0_0_#401801] sm:-bottom-3 sm:-left-3 sm:h-8 sm:w-8 sm:border-[4px] sm:shadow-[6px_6px_0_0_#401801]" />
         </div>
 
         <div

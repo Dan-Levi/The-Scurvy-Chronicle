@@ -9,7 +9,7 @@ interface ArticleCardProps {
 export const ArticleCard = ({ article, index }: ArticleCardProps) => (
   <article
     key={article.id}
-    className={`group relative flex min-h-[420px] flex-col justify-between border-4 border-[#0D0D0D] bg-white shadow-[8px_8px_0_0_#0D0D0D] transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transform hover:shadow-[10px_10px_0_0_#0D0D0D] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0_0_#0D0D0D] sm:min-h-[520px] sm:border-[8px] sm:shadow-[16px_16px_0_0_#0D0D0D] sm:hover:translate-x-[-4px] sm:hover:translate-y-[-4px] sm:hover:shadow-[20px_20px_0_0_#0D0D0D] sm:active:translate-x-[4px] sm:active:translate-y-[4px] sm:active:shadow-[8px_8px_0_0_#0D0D0D]`}
+    className={`group relative flex min-h-[420px] flex-col justify-between border-4 border-[#0D0D0D] bg-[#F2E2CE] shadow-[8px_8px_0_0_#401801] transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:transform hover:shadow-[10px_10px_0_0_#401801] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0_0_#401801] sm:min-h-[520px] sm:border-[8px] sm:shadow-[16px_16px_0_0_#401801] sm:hover:translate-x-[-4px] sm:hover:translate-y-[-4px] sm:hover:shadow-[20px_20px_0_0_#401801] sm:active:translate-x-[4px] sm:active:translate-y-[4px] sm:active:shadow-[8px_8px_0_0_#401801]`}
     style={{
       transform:
         index % 3 === 1
@@ -23,7 +23,7 @@ export const ArticleCard = ({ article, index }: ArticleCardProps) => (
     {/* Enhanced tags with stacking */}
     <div className="absolute -top-3 -left-3 z-10 flex flex-col gap-1 sm:-top-4 sm:-left-4">
       <div
-        className="border-2 border-[#0D0D0D] bg-[#F23054] px-2 py-1 text-xs font-black text-white uppercase shadow-[4px_4px_0_0_#0D0D0D] sm:border-[4px] sm:px-3 sm:shadow-[8px_8px_0_0_#0D0D0D]"
+        className="border-2 border-[#0D0D0D] bg-[#D97B59] px-2 py-1 text-xs font-black text-[#0D0D0D] uppercase shadow-[4px_4px_0_0_#401801] sm:border-[4px] sm:px-3 sm:shadow-[8px_8px_0_0_#401801]"
         style={{
           transform: "rotate(3deg)",
           imageRendering: "pixelated",
@@ -32,7 +32,7 @@ export const ArticleCard = ({ article, index }: ArticleCardProps) => (
         Gaming
       </div>
       <div
-        className="border-2 border-[#0D0D0D] bg-[#F27F1B] px-2 py-1 text-xs font-black text-white uppercase shadow-[4px_4px_0_0_#0D0D0D] sm:border-[4px] sm:px-3 sm:shadow-[8px_8px_0_0_#0D0D0D]"
+        className="border-2 border-[#0D0D0D] bg-[#D97B59] px-2 py-1 text-xs font-black text-[#0D0D0D] uppercase shadow-[4px_4px_0_0_#401801] sm:border-[4px] sm:px-3 sm:shadow-[8px_8px_0_0_#401801]"
         style={{
           transform: "rotate(-2deg)",
           imageRendering: "pixelated",
@@ -65,10 +65,10 @@ export const ArticleCard = ({ article, index }: ArticleCardProps) => (
       </h4>
 
       <div className="relative z-10 mt-auto flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-        <div className="text-xs font-black uppercase opacity-60">
+        <div className="text-xs font-black uppercase text-[#401801]">
           By Capt. Drunkbeard
         </div>
-        <Link to={`/article/${article.id}`} className="border-3 border-[#0D0D0D] bg-[#F2C12E] px-3 py-1 text-xs font-black uppercase shadow-[5px_5px_0_0_#0D0D0D] transition-all hover:translate-x-[-1px] hover:translate-y-[-1px] hover:transform hover:shadow-[6px_6px_0_0_#0D0D0D] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0_0_#0D0D0D] sm:border-[6px] sm:px-4 sm:py-2 sm:text-sm sm:shadow-[10px_10px_0_0_#0D0D0D] sm:hover:translate-x-[-2px] sm:hover:translate-y-[-2px] sm:hover:shadow-[12px_12px_0_0_#0D0D0D] sm:active:translate-x-[2px] sm:active:translate-y-[2px] sm:active:shadow-[6px_6px_0_0_#0D0D0D]">
+        <Link to={`/article/${article.id}`} className="border-3 border-[#0D0D0D] bg-[#D97B59] px-3 py-1 text-xs font-black uppercase shadow-[5px_5px_0_0_#401801] transition-all hover:translate-x-[-1px] hover:translate-y-[-1px] hover:transform hover:shadow-[6px_6px_0_0_#401801] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0_0_#401801] sm:border-[6px] sm:px-4 sm:py-2 sm:text-sm sm:shadow-[10px_10px_0_0_#401801] sm:hover:translate-x-[-2px] sm:hover:translate-y-[-2px] sm:hover:shadow-[12px_12px_0_0_#401801] sm:active:translate-x-[2px] sm:active:translate-y-[2px] sm:active:shadow-[6px_6px_0_0_#401801]">
           Read Rant
         </Link>
       </div>
